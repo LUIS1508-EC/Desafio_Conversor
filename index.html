@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,35 +8,38 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
     <title>Conversor</title>
 </head>
+
 <body>
     <header>
         <h1>CONVERSOR DE MONEDAS</h1>
     </header>
-    
-<div class="fondo">    
-<section class="container">
-<h2>PESOS CLP</h2>
-<input id="origen_moneda" type="number" placeholder="Ingrese el monto en Pesos"/>
-<label for="selecciona_moneda">Monedas a convertir</label>
-<select id="selecciona_moneda">
-    <option value="" selected disabled hidden>Seleccione moneda</option>
-    <option value="dolar">dolar</option>
-    <option value="euro">euro</option>
-    <option value="uf">uf</option>
-    <button onclick="convertirmonedas()">Buscar</button>
-    <h3 id="resultado">...</h3>
-</select>
-    </div></section>
+
+    <div class="fondo">
+        <section class="container">
+            <h2>PESOS CLP</h2>
+            <input id="origen_moneda" type="number" placeholder="Ingrese el monto en Pesos" />
+            <label for="selecciona_moneda">Monedas a convertir</label>
+            <select id="selecciona_moneda">
+                <option value="" selected disabled hidden>Seleccione moneda</option>
+                <option value="dolar">dolar</option>
+                <option value="euro">euro</option>
+                <option value="uf">uf</option>
+            </select>
+            <button onclick="convertirmonedas()">Buscar</button>
+            <h3 id="resultado">...</h3>
+
+        </section>
 
 
-    <section class="container2">
-        <canvas id="cuadro_monedas"></canvas>
+        <section class="container2">
+            <canvas id="cuadro_monedas"></canvas>
 
-    </section>
-    
-</div>
+        </section>
+
+    </div>
 
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/mindicador.json"></script>
 </body>
+
 </html>

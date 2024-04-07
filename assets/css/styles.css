@@ -1,42 +1,63 @@
-body{
-background-image: url(../img/Dollars-Cash-1920x1200.jpg);
-color: rgb(20, 85, 142);
-text-align: center;
+body {
+    background-image: url(../img/Dollars-Cash-1920x1200.jpg);
+    color: rgb(20, 85, 142);
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-header{
+h2 {
 
-    background-color: yellow !important;
-    
+    font-size: 30px;
 }
 
 
-.container, header{
+
+header {
+
+    background-color: black !important;
+    color: white !important;
+    border: 1px solid white !important;
+
+}
+
+
+.container,
+header {
     display: flex;
     flex-direction: column;
     width: 50%;
     align-items: center;
-    background-color:aquamarine;
-    margin:10px auto;
+    background-color: grey;
+    margin: 10px auto;
+    color: black;
 }
 
-.containerbox{
+.containerbox {
     width: 50%;
-    margin:10px auto;
+    margin: 10px auto;
 }
 
-button, input, select, h3{
+button,
+input,
+select,
+h3 {
     width: 170px;
     margin: 0px 0px 8px 0px;
     padding: 5px 0px 5px 0px;
     text-align: center;
 }
 
-button{
+button {
     background-color: deepskyblue;
-    color:white;
+    color: white;
     border-color: deepskyblue;
 }
-canvas{
-    background-color: white;
+
+canvas {
+    background-color: gainsboro;
+}
+
+label {
+
+    padding-bottom: 10px;
 }

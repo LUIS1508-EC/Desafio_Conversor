@@ -17,7 +17,7 @@
     <div class="fondo">
         <section class="container">
             <h2>PESOS CLP</h2>
-            <input id="origen_moneda" type="number" placeholder="Ingrese el monto en Pesos" />
+            <input id="origen_moneda" type="number" min="1" placeholder="Ingrese el monto en Pesos" />
             <label for="selecciona_moneda">Monedas a convertir</label>
             <select id="selecciona_moneda">
                 <option value="" selected disabled hidden>Seleccione moneda</option>
@@ -31,15 +31,14 @@
         </section>
 
 
-        <section class="container2">
+        <section class="containerbox">
             <canvas id="cuadro_monedas"></canvas>
 
         </section>
 
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/mindicador.json"></script>
 </body>
 
 </html>

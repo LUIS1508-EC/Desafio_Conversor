@@ -14,6 +14,7 @@ const find = async (monedas) => {
 }
 }
 
+
 const convertirmonedas = async () => {
     try {
         if(!origen_moneda.value) {alert("Ingrese el monto en Pesos"); return;}
@@ -28,3 +29,32 @@ getDataLabelChart(datos.allValue);
         console.log(error)
     }
 }
+
+// Crear gráfico sin data
+let diezultimos = new Chart(cuadro_monedas, {
+    type: 'line',
+    data: { labels: [], datasets: [{ label: 'Historial últimos 10 días', data: [], borderWidth: 1 }] },
+    options: { scales: { y: { beginAtZero: false } } }
+});
+
+const getDataLabelChart = async (data) => {
+    try {
+        // Eliminar grafico anterior
+        diezultimos.destroy();
+        // Rescatar datos para mostrar en grafico
+        const tabla = await data.map(label => new Intl.DateTimeFormat('es-CL').format(new Date(label.fecha)));
+        const datostabla = await data.map(data => data.valor);
+        // Transformar datos para mostrar en grafico
+        const ultimosdiez = tabla.splice(0, 10).reverse();
+        const lastTenData = datostabla.splice(0, 10).reverse();
+        // Crear nuevo grafico con datos rescatados
+        diezultimos = new Chart(cuadro_monedas, {
+            type: 'line',
+            data: { labels: ultimosdiez, datasets: [{ label: 'Historial últimos 10 días', data: lastTenData, borderWidth: 1 }] },
+            options: { scales: { y: { beginAtZero: false } } }
+        });
+    } catch (error) {
+        console.log(error)
+    }
+}
+
